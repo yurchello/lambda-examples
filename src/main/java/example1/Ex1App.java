@@ -5,7 +5,7 @@ package example1;
  */
 public class Ex1App {
     public static void main(String[] args) {
-        int i=0;
+        int i = 0;
 /////////////////////////
         FunctionalI functionalI = () -> {
             System.out.println("Hi");
@@ -18,17 +18,25 @@ public class Ex1App {
         FunctionalWithParameter functionalWithParameter = someName -> System.out.println("functionalWithParameter" + someName);
         FunctionalWithParameter functionalWithParameter2 = someName -> {
             System.out.println("functionalWithParameter2" + someName);
-           // i=3;
-            System.out.println("functionalWithParameter2" +i);
+            // i=3;
+            System.out.println("functionalWithParameter2" + i);
         };
         functionalWithParameter.doSome("hello");
         functionalWithParameter2.doSome("hello2");
-        /////////////////////////
+/////////////////////////
 
-        FunctionalWithTwoParameters functionalWithTwoParameters = (s1,s2) ->{
+        FunctionalWithTwoParameters functionalWithTwoParameters = (s1, s2) -> {
             System.out.println(s1 + s2);
         };
-        functionalWithTwoParameters.doSome("1","2");
+        functionalWithTwoParameters.doSome("1", "2");
+////////////////////////
+        FunctionalWithTwoParametersReturn functionalWithTwoParametersReturn = (String s1,String s2) -> {
+            System.out.println();
+            return 3;
+        };
 
+        int rez = functionalWithTwoParametersReturn.doSome("s1","s2");
     }
+
+
 }
