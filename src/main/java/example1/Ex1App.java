@@ -11,6 +11,7 @@ public class Ex1App {
             System.out.println("Hi");
             System.out.println("dev");
         };
+
         FunctionalI functionalI2 = () -> System.out.println("yyy");
         functionalI.doSome();
         functionalI2.doSome();

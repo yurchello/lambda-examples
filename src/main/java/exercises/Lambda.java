@@ -40,7 +40,6 @@ public class Lambda {
         System.out.println(countBandMembersInternal(artists));
 
 
-
     }
 
     static Long countBandMembersInternal(List<Artist> artists) {
